@@ -1,16 +1,18 @@
-// import counter from "@/composables/counter";
 import { createStore } from "vuex";
 
 export default createStore({
   state: {
     defaultCount: 0,
-    obj: {
-      count: parseInt(localStorage.getItem("count")) || 0,
+    form: {
+      count: "",
     },
   },
   getters: {
     count(state) {
       return state.defaultCount;
+    },
+    countInput(state) {
+      return state.form.count;
     },
   },
   mutations: {
@@ -23,8 +25,12 @@ export default createStore({
     reset(state) {
       state.defaultCount = 0;
     },
-    updateMessage(state, payload) {
-      state.obj.message = payload;
+    updateInput(state, payload) {
+      state.form.count = payload;
+    },
+    setValue(state, payload) {
+      state.defaultCount = payload;
+      // state.form.count = payload;
     },
   },
   actions: {
@@ -37,9 +43,11 @@ export default createStore({
     reset({ commit }) {
       commit("reset");
     },
-    updateMessage({ commit }, payload) {
-      commit("updateMessage", payload);
+    updateInput({ commit }, payload) {
+      commit("updateInput", payload);
+    },
+    setValue({ commit }, payload) {
+      commit("setValue", payload);
     },
   },
-  modules: {},
 });
