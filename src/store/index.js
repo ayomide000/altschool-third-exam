@@ -11,7 +11,7 @@ export default createStore({
     count(state) {
       return state.defaultCount;
     },
-    countInput(state) {
+    countInputs(state) {
       return state.form.count;
     },
   },
