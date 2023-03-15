@@ -1,16 +1,21 @@
-<template>
-  <h1 className="text-blue-500">This is a counter page</h1>
-  <h2> Count:  {{ count }}</h2>
-  <div class="input">
-  {{ countInput }}
-    <!-- <input type="number" v-model.number="countInput" />  -->
-    <input type="number" :value="countInput" @change="updateInput" @keyup.enter="setValue"/>
+<template>  
+  <div :class="style.counterWrap">
+  <h2 :class="style.counter"> Counter:   {{ count }}</h2>
+  <div :class="style.incDecCont">
+      <button :class="style.decrement" @click="decrement">-</button>
+      <button :class="style.increment" @click="increment">+</button>
   </div>
-  <div>
-    <button @click="decrement">Decrement</button>
-    <button @click="reset">Reset</button>
-    <button @click="increment">Increment</button>
-    <button @click="setValue">Set Count</button>
+  <div :class="style.inputCont">
+  <!-- {{ countInput }} -->
+    <!-- <input type="number" v-model.number="countInput" />  -->
+    <input type="number" :value="countInput" @change="updateInput" @keyup.enter="setValue" :class="style.input"/>
+    <button :class="style.set" @click="setValue">Set Count</button>
+  </div>
+  <!-- <div> -->
+    <button :class="style.reset" @click="reset">Reset</button>
+    
+  <!-- </div> -->
+  <h1 className="text-blue-500 text-center font-bold text-2xl">A counter app</h1>
   </div>
 </template>
 
@@ -67,6 +72,23 @@
 
 
     export default {
+      name: 'CounterPage',
+      data: () => {
+      return {
+        style: {
+          counterWrap: `h-[50vh] mx-5 flex flex-col justify-between`,
+          counter: `text-3xl font-bold text-center`,
+          inputCont: `flex mx-3  border-none outline-none`,
+          incDecCont: `w-1/2 mx-auto flex justify-between`,
+          increment: `text-green-500 transition-all ease-in-out font-bold text-3xl text-center border-0 bg-white p-4 shadow rounded-full hover:shadow-2xl hover:bg-green-500 hover:text-white duration-500`,
+          decrement: `text-yellow-300 transition-all ease-in-out font-bold text-3xl text-center border-0 bg-white p-4 shadow rounded-full hover:shadow-2xl hover:bg-yellow-400 hover:text-white duration-500`,
+          reset: `text-red-500 inline w-1/4 mx-auto transition-all ease-in-out  text-lg text-center border-0 bg-white p-2 shadow rounded-full hover:shadow-2xl hover:bg-red-500 hover:text-white duration-500`,
+          input: `bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-lg focus:ring-blue-500 focus:bg-white focus:border-blue-500 block w-9/12 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500`,
+          set: `bg-gray-50 border-0 bg-trabsparent text-center rounded-r-lg hover:bg-slate-700 hover:text-blue-500 w-3/12`
+        }
+      }
+  },
+
       setup () {
         const store = useStore();
 

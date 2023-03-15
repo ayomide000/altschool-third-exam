@@ -5,12 +5,14 @@
 
 <template>
   <!-- <NavLink/> -->
-  <div id="nav" >
-    <div :class="style.li">Akande Counter App</div>
-    <div class="text-green-500"> <router-link to="/" >Home</router-link></div> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/counter">Counter</router-link>
-  </div>
+  <nav :class="style.nav">
+    <h2 :class="style.logo">Akande Gbolahan</h2>
+    <div :class="style.navLink">
+   <router-link to="/" :class="style.homeLink">Home</router-link> 
+    <!-- <router-link to="/about" class="text-red-500">About</router-link>  -->
+    <router-link to="/counter" :class="style.counterLink">Counter</router-link>
+    </div>
+  </nav>
   <router-view />
 </template>
 
@@ -20,10 +22,14 @@
 export default {
   name: 'NavLink',
   // components: { NavLink,}
-  data() {
+  data: () => {
     return {
       style: {
-        li: `text-red-800`
+        nav: `flex justify-between my-3 mx-2 shadow-lg`,
+        logo: `font-bold p-2`,
+        navLink: `text-blue-400 p-2`,
+        homeLink: `mr-2 p-2 rounded-lg transition-all ease-in-out duration-500 hover:bg-slate-700 dark:hover:bg-white`,
+        counterLink: `p-2  rounded-lg transition-all ease-in-out duration-500  hover:bg-slate-700 dark:hover:bg-white`
       }
     }
   }
@@ -32,12 +38,13 @@ export default {
 </script>
 
 
-<style> #app {
+<style> 
+/* #app {
    font-family: Avenir, Helvetica, Arial, sans-serif;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
    text-align: center;
-   color: #2c3e50;
+   color: #d30d98;
  }
 
  #nav {
@@ -47,9 +54,13 @@ export default {
  #nav a {
    font-weight: bold;
    color: #2c3e50;
+ } */
+
+ /* #nav a.router-link-active {
+  color: red;
  }
 
  #nav a.router-link-exact-active {
    color: #42b983;
- }
+ } */
 </style>
