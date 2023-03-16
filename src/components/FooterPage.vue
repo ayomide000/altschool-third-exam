@@ -1,6 +1,6 @@
 <template>
     <footer :class="style.footer">
-    <p>Copyright &copy; Akande Gbolahan</p>
+    <p> &copy; Copyright Powered by: Akande Gbolahan</p>
     </footer>
 </template>
 
