@@ -1,8 +1,8 @@
 # altschool-third-sem-exam-proj
 
-## Netlify Deploy Link
+## Netlify Deployment Link
 
-See [Counter App](https://akande-counter.netlify.app/)
+See [Counter App](https://akande-gbolahan-counter.netlify.app/)
 
 ## Project setup
 
