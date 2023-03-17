@@ -4,6 +4,20 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        ss: {
+          max: "375px",
+        },
+        sss: {
+          max: "360px",
+        },
+        xss: {
+          max: "320px",
+        },
+      },
+      fontSize: {
+        xss: "0.625rem",
+      },
       keyframes: {
         wave: {
           "0%": { transform: "rotate(0.0deg)" },

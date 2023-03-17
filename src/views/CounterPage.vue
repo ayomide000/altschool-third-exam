@@ -38,8 +38,8 @@
           increment: `text-green-500 transition-all ease-in-out font-bold text-3xl text-center border-0 bg-white p-4 shadow rounded-full hover:shadow-2xl hover:bg-green-500 hover:text-white duration-500`,
           decrement: `text-yellow-300 transition-all ease-in-out font-bold text-3xl text-center border-0 bg-white p-4 shadow rounded-full hover:shadow-2xl hover:bg-yellow-400 hover:text-white duration-500`,
           reset: `text-red-500 inline w-1/4 mx-auto transition-all ease-in-out  text-lg text-center border-0 bg-white p-2 shadow rounded-full hover:shadow-2xl hover:bg-red-500 hover:text-white duration-500`,
-          input: `bg-gray-50 border border-blue-300 text-gray-900 text-xl rounded-l-lg focus:ring-blue-500 focus:bg-white font-bold text-3xl focus:border-blue-500 block w-9/12 p-2.5 dark:bg-gray-400 dark:border-0 dark:text-slate-900  dark:focus:bg-white`,
-          set: `bg-gray-50 border-0 bg-transparent text-center rounded-r-lg hover:bg-slate-700 hover:text-blue-500 w-3/12 dark:hover:bg-white dark:text-white dark:hover:text-blue-500`,
+          input: `bg-gray-50 border border-blue-300 text-gray-900 text-xl rounded-l-lg focus:ring-blue-500 focus:bg-white font-bold text-3xl focus:border-blue-500 block w-9/12 p-2.5 dark:bg-gray-400 dark:border-0 dark:text-slate-900  dark:focus:bg-white xss:w-8/12`,
+          set: `bg-gray-50 border-0 bg-transparent text-center rounded-r-lg hover:bg-slate-700 hover:text-blue-500 w-3/12 dark:hover:bg-white dark:text-white dark:hover:text-blue-500 xss:text-sm xss:w-4/12`,
           negative: `animate-count text-red-500 text-5xl`,
           positive: `animate-count text-green-600 text-5xl`
         }

@@ -2,7 +2,7 @@
 
 ## Netlify Deployment Link
 
-See [Counter App](https://akande-gbolahan-counter.netlify.app/)
+See [Counter App](https://akandegbolahan-counter.netlify.app/)
 
 ## Project setup
 

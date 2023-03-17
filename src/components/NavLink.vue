@@ -2,7 +2,7 @@
 <template>
   <!-- <NavLink/> -->
   <nav :class="style.nav">
-    <h2 :class="style.logo"><router-link to="/"> Akande Gbolahan</router-link></h2>
+    <h2 :class="style.logo"><router-link to="/" > Akande Counter</router-link></h2>
     <div :class="style.navLink">
    <router-link to="/" :class="style.homeLink">Home</router-link> 
 
@@ -34,13 +34,13 @@ export default {
   data: () => {
     return {
       style: {
-        nav: `flex justify-between my-3 mx-2 shadow-lg dark:shadow-blue-900`,
-        logo: `font-bold p-2 mt-2`,
-        navLink: `text-blue-400 p-2 flex `,
-        homeLink: `mr-2 p-2 rounded-lg transition-all ease-in-out duration-500 hover:bg-slate-700 dark:hover:bg-white`,
-        counterLink: `p-2  rounded-lg transition-all ease-in-out duration-500  hover:bg-slate-700 dark:hover:bg-white`,
+        nav: `flex justify-between my-2  shadow-lg dark:shadow-blue-900`,
+        logo: `font-bold p-2 mt-2 text-center ss:text-sm sss:text-xs sss:mt-3 xss:text-xss`,
+        navLink: `text-blue-400 p-2 flex xss:mt-1`,
+        homeLink: `mr-2 p-2 rounded-lg transition-all ease-in-out duration-500 hover:bg-slate-700 dark:hover:bg-white xss:text-xss`,
+        counterLink: `p-2  rounded-lg transition-all ease-in-out duration-500  hover:bg-slate-700 dark:hover:bg-white xss:text-xss `,
         gitCont: `p-2 bg-transparent hover:bg-transparent rounded-lg transition-all ease-in-out duration-500  dark:hover:bg-white`,
-        github: `w-5 h-5 dark:bg-white`,
+        github: `w-5 h-5 dark:bg-white `,
         toggle: `mt-1 flex ml-2 p-2  rounded-lg transition-all ease-in-out duration-500 dark:hover:bg-white`,
         dark: `w-5 h-5 -mt-1 bg-white`,
         light: `w-5 h-5 -mt-1`

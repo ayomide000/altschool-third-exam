@@ -9,11 +9,13 @@
     <p>A Counter </p>
     </div>
     <section :class="style.homeSect">
-    <div>
+    <div :class="style.counterText">
      Counter app with Vuejs that performs increment, decrement, reset and setVaue functions, using Vuex as state management
     </div>
     <div :class="style.homeLinkCont">
-    <RouterLink to="/counter" :class="style.homeLink">See Counter</RouterLink>
+    <button :class="style.homeLink">
+    <RouterLink to="/counter" >Counter</RouterLink>
+    </button>
     </div>
     </section>
   </div>
@@ -36,8 +38,9 @@ export default {
         imageCont: `text-3xl text-blue-300 text-center sm:mb-3 `,
         imageCounter: `mx-auto`,
         homeSect: `text-xl mt-8 sm:mb-4`,
-        homeLinkCont: `mt-7 mx-auto w-1/3`,
-        homeLink: `transition-all ease-in-out duration-500 text-blue-500 justify-center ml-auto w-11/12 hover:bg-blue-500 hover:text-white mt-2 rounded-lg p-2 dark:text-blue-500 dark:hover:bg-white dark:hover:text-blue-500`
+        counterText: `ss:text-sm`,
+        homeLinkCont: `flex items-center justify-center`,
+        homeLink: `transition-all ease-in-out duration-500 mt-3 p-2 text-blue-500   hover:bg-blue-500 hover:text-white  rounded-lg dark:text-blue-500 dark:hover:bg-white dark:hover:text-blue-500`
       }
     }
   }
