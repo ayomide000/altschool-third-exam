@@ -7,7 +7,7 @@
    <router-link to="/" :class="style.homeLink">Home</router-link> 
 
     <router-link to="/counter"  :class="style.counterLink" >Counter</router-link>
-    <a href="#" :class="style.gitCont"><img :class="style.github" src="../assets/icons/github.svg" alt="github"></a>
+    <a href="https://github.com/ayomide000/altschool-third-exam.git" :class="style.gitCont"><img :class="style.github" src="../assets/icons/github.svg" alt="github" target="_blank" rel="noopener noreferrer"></a>
     <button :class="style.toggle" @click="isDark = !isDark">
     <img :class="style.dark" src="../assets/icons/moon.svg" alt="dark" v-if="isDark === true">
     <img :class="style.light" src="../assets/icons/sun.svg" alt="light" v-if="isDark === false">

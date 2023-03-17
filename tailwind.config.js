@@ -23,7 +23,7 @@ module.exports = {
       },
       animation: {
         wave: "wave 1.5s infinite",
-        count: "count 500ms ease-in-out",
+        count: "count 1.5s ease-in",
       },
     },
   },

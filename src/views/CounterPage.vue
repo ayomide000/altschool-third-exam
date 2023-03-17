@@ -1,7 +1,7 @@
 <template>  
   <div :class="style.counterWrap">
   <h2 :class="style.counter"> Counter:  
-  <span :class="style.countSize">{{ count }}</span> </h2>
+  <span :class="valueCount">{{ count }}</span> </h2>
   <!-- count > 0 ? 'style.positive' : count < 0 ? 'style.negative' : null" -->
   <div :class="style.incDecCont">
       <button :class="style.decrement" @click="decrement">-</button>
@@ -40,10 +40,16 @@
           reset: `text-red-500 inline w-1/4 mx-auto transition-all ease-in-out  text-lg text-center border-0 bg-white p-2 shadow rounded-full hover:shadow-2xl hover:bg-red-500 hover:text-white duration-500`,
           input: `bg-gray-50 border border-blue-300 text-gray-900 text-xl rounded-l-lg focus:ring-blue-500 focus:bg-white font-bold text-3xl focus:border-blue-500 block w-9/12 p-2.5 dark:bg-gray-400 dark:border-0 dark:text-slate-900  dark:focus:bg-white`,
           set: `bg-gray-50 border-0 bg-transparent text-center rounded-r-lg hover:bg-slate-700 hover:text-blue-500 w-3/12 dark:hover:bg-white dark:text-white dark:hover:text-blue-500`,
-          negative: `animate-count text-red-500`,
-          positive: `animate-count text-green-600`
+          negative: `animate-count text-red-500 text-5xl`,
+          positive: `animate-count text-green-600 text-5xl`
         }
       }
+  },
+
+  computed: {
+    valueCount() {
+      return this.count >= 0 ? this.style.positive : this.count < 0 ? this.style.negative : null
+    }
   },
 
       setup () {
@@ -132,6 +138,14 @@
 //   },
 
 // };
-
+<style>
+.text-green {
+  color: green;
+  font-size: 4rem;
+};
+.text-red {
+  color: red
+}
+</style>
 
 
