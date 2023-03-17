@@ -2,7 +2,7 @@
 <template>
   <!-- <NavLink/> -->
   <nav :class="style.nav">
-    <h2 :class="style.logo">Akande Gbolahan</h2>
+    <h2 :class="style.logo"><router-link to="/"> Akande Gbolahan</router-link></h2>
     <div :class="style.navLink">
    <router-link to="/" :class="style.homeLink">Home</router-link> 
 
@@ -35,8 +35,8 @@ export default {
     return {
       style: {
         nav: `flex justify-between my-3 mx-2 shadow-lg dark:shadow-blue-900`,
-        logo: `font-bold p-2`,
-        navLink: `text-blue-400 p-2 flex`,
+        logo: `font-bold p-2 mt-2`,
+        navLink: `text-blue-400 p-2 flex `,
         homeLink: `mr-2 p-2 rounded-lg transition-all ease-in-out duration-500 hover:bg-slate-700 dark:hover:bg-white`,
         counterLink: `p-2  rounded-lg transition-all ease-in-out duration-500  hover:bg-slate-700 dark:hover:bg-white`,
         gitCont: `p-2 bg-transparent hover:bg-transparent rounded-lg transition-all ease-in-out duration-500  dark:hover:bg-white`,

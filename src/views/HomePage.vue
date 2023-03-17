@@ -36,8 +36,8 @@ export default {
         imageCont: `text-3xl text-blue-300 text-center sm:mb-3 `,
         imageCounter: `mx-auto`,
         homeSect: `text-xl mt-8 sm:mb-4`,
-        homeLinkCont: `mt-4 `,
-        homeLink: `transition-all ease-in-out duration-500 hover:bg-blue-700 hover:text-white mt-2 rounded-lg p-2 dark:text-blue-500 dark:hover:bg-white dark:hover:text-blue-500`
+        homeLinkCont: `mt-4 mx-auto w-1/3`,
+        homeLink: `transition-all ease-in-out duration-500 text-blue-500 justify-center ml-auto w-11/12 hover:bg-blue-500 hover:text-white mt-2 rounded-lg p-2 dark:text-blue-500 dark:hover:bg-white dark:hover:text-blue-500`
       }
     }
   }
