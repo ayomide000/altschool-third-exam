@@ -6,7 +6,6 @@ export default createStore({
     form: {
       count: "",
     },
-    isDark: true,
   },
   getters: {
     count(state) {
